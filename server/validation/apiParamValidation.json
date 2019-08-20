@@ -1,0 +1,26 @@
+{
+  "USER" : {
+    "POST" : {
+      "properties": {
+        "name" : { "type": "string" },
+        "email" : { "type": "string" },
+        "role" : { "type": "string","enum" : ["HR","EMPLOYEE"] }
+      },
+      "required": ["name","email","role"]
+    },
+    "GET" : {
+      "properties": {
+        "userId" : { "type": "string" }
+      },
+      "required": ["userId"]
+    }
+  },
+  "SHORTURL": {
+    "GET" : {
+      "properties": {
+        "shortId" : { "type": "string" }
+      },
+      "required": ["shortId"]
+    }
+  }
+}

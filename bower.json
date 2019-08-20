@@ -6,6 +6,13 @@
     "Sagar Chaudhari <chaudharisagard@gmail.com>"
   ],
   "license": "ISC",
+  "dependencies": {
+    "bootstrap": "3.0.0",
+    "jquery" : "latest",
+    "angular" : "1.6.5",
+    "angular-ui-router":"1.0.3",
+    "moment": "latest"
+  },
   "homepage": "",
   "ignore": [
     "**/.*",

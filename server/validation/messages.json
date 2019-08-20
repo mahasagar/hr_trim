@@ -1,0 +1,15 @@
+{
+  "ajvError" : "ajv_errors",
+  "empAddedSuccessfully" : "Employee Added Successfully",
+  "empAddedFailed" : "Employee Added Failed",
+  "updatedSuccessfully" : "Updated Successfully",
+  "updateFailed" : "Update Failed",
+  "userAdded" : "User Added",
+  "noDataFound" : "Data Not Found",
+  "userAddedFailed" : "User Added Failed",
+  "newStatus" : "NEW",
+  "userEmailIndex" : "email_1",
+  "userAlreadyExistsMessage" : "User Already Exists",
+  "shortUrlAdded" : "Short Url Successfully to Create",
+  "shortUrlFailed" : "Short Url Failed to Create"
+}
