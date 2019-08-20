@@ -1,0 +1,17 @@
+{
+  "name": "hr_app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Sagar Chaudhari <chaudharisagard@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
