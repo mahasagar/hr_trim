@@ -15,6 +15,24 @@
       "required": ["userId"]
     }
   },
+  "CHANGEPASSWORD" : {
+    "PUT" : {
+      "properties": {
+        "userId" : { "type": "string" },
+        "password" : { "type": "string" }
+      },
+      "required": ["userId","password"]
+    }
+  },
+  "LOGIN" : {
+    "POST" : {
+      "properties": {
+        "username" : { "type": "string" },
+        "password" : { "type": "string" }
+      },
+      "required": ["username","password"]
+    }
+  },
   "SHORTURL": {
     "GET" : {
       "properties": {

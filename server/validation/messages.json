@@ -11,5 +11,8 @@
   "userEmailIndex" : "email_1",
   "userAlreadyExistsMessage" : "User Already Exists",
   "shortUrlAdded" : "Short Url Successfully to Create",
-  "shortUrlFailed" : "Short Url Failed to Create"
+  "shortUrlFailed" : "Short Url Failed to Create",
+  "usernameOrPasswordWrong" : "Username Or Password Wrong",
+  "userPasswordChanged" : "Password Changed Successfully",
+  "passwordFailedToUpdate" : "Password Not Updated"
 }

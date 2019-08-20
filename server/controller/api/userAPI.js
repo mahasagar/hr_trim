@@ -21,6 +21,7 @@ function addUser(req, res) {
         status : false
     };
     var reqParam = req.body;
+    reqParam.username = reqParam.email;
     reqParam.roles = [reqParam.role];
    //TODO : Add Json Mapper
     User.create(reqParam,function (err, response) {
@@ -63,5 +64,62 @@ function getUser(req,res){
     });
 }
 
+function changePassword(req,res){
+     var result = {
+        status : false
+    };
+    var reqParam = req.body;
+    var findQuery = {
+        _id : reqParam.userId
+    };
+    console.log('findQuery: ',findQuery);
+    User.findOne(findQuery, async function (err, responseData) {
+        if (responseData) {
+            responseData.password = reqParam.password;
+            var userSaved = await responseData.save();
+            if(userSaved){
+                result.message = Messages.userPasswordChanged;
+                result.status = true;
+            }else{
+                //TODO : Logger
+                result.message = Messages.passwordFailedToUpdate;
+            }
+            res.status(200);
+            res.json(result);
+        } else {
+            result.message = Messages.noDataFound;
+            res.status(200);
+            res.json(result);
+        }
+    });
+}
+
+function login(req,res){
+     var result = {
+        status : false
+    };
+    var reqParam = req.body;
+    var findQuery = {
+        username : reqParam.username,
+        password : reqParam.password
+    };
+    console.log('findQuery: ',findQuery);
+    User.findOne(findQuery, function (err, responseData) {
+        if (responseData) {
+            result.response = User.getSafeJSON(responseData);
+            result.status = true;
+            res.status(200);
+            res.json(result);
+        } else {
+            result.message = Messages.usernameOrPasswordWrong;
+            res.status(200);
+            res.json(result);
+        }
+    });
+}
+
+
 module.exports.addUser = addUser;
 module.exports.getUser = getUser;
+module.exports.login = login;
+module.exports.changePassword = changePassword;
