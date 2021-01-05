@@ -31,7 +31,7 @@ var routes = require('./server/routes');
 routes.register(router);
 app.use('/api', router);
 
-mongoose.connect('mongodb://' + config.db.mongo.host + ':' + config.db.mongo.port + '/' + config.db.mongo.db);
+// mongoose.connect('mongodb://' + config.db.mongo.host + ':' + config.db.mongo.port + '/' + config.db.mongo.db);
 app.listen(9000, function () {
     console.log("Welcome to Mental Health App, server started at 4000")
 })

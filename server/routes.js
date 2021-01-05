@@ -4,5 +4,6 @@ var controllers = requireDir('./controller/api');
 module.exports.register = function (router) {
     // ADD API
     router.route('/user_count').get(controllers.userAPI.getUserCount);
+    router.route('/send_email').post(controllers.userAPI.sendEmail);
 
 };
